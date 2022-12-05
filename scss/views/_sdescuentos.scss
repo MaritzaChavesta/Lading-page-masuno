@@ -1,0 +1,105 @@
+.sdescuentos{
+    max-width: 1500px;
+    margin: 0 auto;
+    
+   
+    padding: 4rem 2rem 0rem 2rem;
+
+    &__cyber{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1{
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 44px;
+            color: $primary;
+        }
+
+        h2{
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 33px;
+            color: $black_one;
+            strong{
+                color: $red;
+            }
+        }
+
+    }
+    &__pasos{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8rem 2rem 4rem 2rem;
+        gap: 14rem;
+        &__1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1{
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 44px;
+                color: $primary;
+            }
+
+            span{
+                margin: 20px 30px;
+                padding: 30px 40px;
+                border-radius: 100% ;
+                background: $primary;
+                border: 7px solid #BBBBBB;
+                box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+              
+                img{
+                   
+                    width: 100%;
+                    height: 100%;
+                }
+                
+            }
+            h2{
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 44px;
+                color: $primary;
+            }
+            p{
+                text-align: center;
+                max-width: 400px;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 25px;
+                color: $black_one;
+                padding: 2rem 0rem;
+            }
+        }
+    }
+}
+
+/***************************************/
+
+@media (max-width: 700px){
+ .sdescuentos{
+    text-align: center;
+    &__pasos{
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        &__1{
+            img{
+                padding: 0rem 4rem;
+            }
+
+            span{
+               
+                padding: 30px 20px;
+            
+            } 
+        }
+    }
+ }
+}

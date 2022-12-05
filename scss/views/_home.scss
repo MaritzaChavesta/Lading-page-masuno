@@ -1,0 +1,97 @@
+
+ header{
+ 
+    background-color: $primary;
+    position: fixed;
+    z-index: 2; 
+     
+    width: 100%;
+    
+} 
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 2rem 2rem;
+    
+    max-width: 1500px;
+    margin: 0 auto;
+    &__label{
+        display: none;
+    }
+    &__input{
+        display: none;
+    }
+    &__logo{
+        img{
+            width: 100%;
+            height: 42px;  
+         }
+    }
+
+    &__enlaces{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5rem;
+        a{
+            color: $white;
+            text-transform:capitalize;
+            font-size: 16px;
+        }
+        :hover{
+            color: $red;
+        }
+    }
+}
+
+
+
+/********************************************************************/
+
+
+@media (max-width: 700px) {
+    .navbar{
+       
+        &__label{
+            display: block;
+            cursor: pointer;
+        }
+        
+
+        &__enlaces{
+            position: fixed;
+            top: 80px;
+            bottom: 0;
+            background-color: #D43E36;
+            width: 100%;
+            left: 0;
+
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+
+
+            clip-path: circle(0 at center); 
+            transition: clip-path 1s ease-in-out;
+
+
+
+            :hover{
+                color: $primary;
+            }
+        }
+
+        &__input:checked + &__enlaces{
+            clip-path: circle(100% at center); 
+          
+         }    
+}
+
+}
+   
+
+
+
+

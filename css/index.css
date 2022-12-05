@@ -1,0 +1,532 @@
+/*Variables*/
+/*colors*/
+/*spacings*/
+/*Globals*/
+@import url("https://fonts.googleapis.com/css2? family=Open+Sans:wght@300;400;600;700&display=swap");
+@keyframes saltar {
+  0% {
+    transform: translatey(0); }
+  10% {
+    transform: translatey(-10px); }
+  50% {
+    transform: translatey(10px); }
+  80% {
+    transform: translatey(10px); } }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Open Sans'; }
+
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+/*partials*/
+footer {
+  background-color: #1A36A8; }
+
+.footer {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  color: #ffff; }
+  .footer__nosotros img {
+    width: 80px;
+    height: 66.43px; }
+  .footer__nosotros h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27.24px;
+    padding: 1.5rem 0; }
+  .footer__nosotros p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 21.79px; }
+  .footer__informamos h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27.24px;
+    padding: 1.5rem 0; }
+  .footer__informamos p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 21.79px;
+    padding: 1rem 0; }
+  .footer__contactanos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; }
+    .footer__contactanos h2 {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 27.24px;
+      padding: 1rem 0; }
+    .footer__contactanos__numero {
+      display: flex;
+      align-items: center;
+      gap: 2em; }
+    .footer__contactanos__redes {
+      display: flex;
+      align-items: center;
+      gap: 3em;
+      padding: 1rem 0; }
+    .footer__contactanos__2022 {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 21.79px;
+      text-align: center;
+      padding: 6rem 0; }
+
+/********************************************************************/
+@media (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem; } }
+
+.btn {
+  padding: 3rem 0; }
+  .btn__tecnologia {
+    position: relative;
+    display: inline-block;
+    padding: 10px 36px;
+    color: #ffff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background: #1A36A8;
+    cursor: pointer; }
+
+.bt {
+  text-align: center; }
+  .bt__formulario {
+    position: relative;
+    display: inline-block;
+    padding: 10px 36px;
+    color: #ffff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background: #E3E3E3;
+    cursor: pointer; }
+
+.subrayado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 4rem; }
+
+/*******************************************/
+.separador {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2rem 0rem; }
+  .separador img {
+    width: 100%;
+    height: 100%; }
+
+/*******************************************/
+@media (max-width: 700px) {
+  .subrayado img {
+    width: 100%;
+    height: 100%; }
+  .separador {
+    padding: 0rem 2rem; } }
+
+/*Views*/
+header {
+  background-color: #1A36A8;
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  max-width: 1500px;
+  margin: 0 auto; }
+  .navbar__label {
+    display: none; }
+  .navbar__input {
+    display: none; }
+  .navbar__logo img {
+    width: 100%;
+    height: 42px; }
+  .navbar__enlaces {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem; }
+    .navbar__enlaces a {
+      color: #ffff;
+      text-transform: capitalize;
+      font-size: 16px; }
+    .navbar__enlaces :hover {
+      color: #D43E36; }
+
+/********************************************************************/
+@media (max-width: 700px) {
+  .navbar__label {
+    display: block;
+    cursor: pointer; }
+  .navbar__enlaces {
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    background-color: #D43E36;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    clip-path: circle(0 at center);
+    transition: clip-path 1s ease-in-out; }
+    .navbar__enlaces :hover {
+      color: #1A36A8; }
+  .navbar__input:checked + .navbar__enlaces {
+    clip-path: circle(100% at center); } }
+
+.main {
+  background-color: #1A36A8;
+  width: 100%;
+  height: 100%;
+  padding-top: 140px;
+  padding-bottom: 4rem;
+  margin-bottom: 6rem; }
+  .main__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0rem 2rem;
+    gap: 15rem;
+    color: #ffff; }
+    .main__content__cyber__hora {
+      display: flex;
+      align-items: center;
+      gap: 2rem; }
+      .main__content__cyber__hora__icons span {
+        animation: saltar 1s infinite;
+        animation-timing-function: ease-in;
+        display: inline-block;
+        transform: translatey(0); }
+      .main__content__cyber__hora__icons span:nth-child(1) {
+        animation-delay: 0; }
+      .main__content__cyber__hora__icons span:nth-child(2) {
+        animation-delay: 0.2s; }
+      .main__content__cyber__hora__icons span:nth-child(3) {
+        animation-delay: 0.4s; }
+    .main__content__cyber h1 {
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 76px; }
+    .main__content__cyber h2 {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 54px; }
+      .main__content__cyber h2 span {
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 76px; }
+    .main__content__cyber p {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 38px;
+      padding: 2rem 0rem; }
+    .main__content__cyber__ticket {
+      padding: 2rem 0rem 5rem 0rem; }
+      .main__content__cyber__ticket img {
+        width: 100%;
+        height: 100%; }
+    .main__content__formulario {
+      background-color: #ffff;
+      color: #2E2E2E;
+      width: 642px;
+      height: 599px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      position: relative; }
+      .main__content__formulario__info {
+        padding: 2rem 3rem; }
+        .main__content__formulario__info ul {
+          position: absolute;
+          left: 85%;
+          top: -5%; }
+        .main__content__formulario__info h2 {
+          font-weight: 800;
+          font-size: 24px;
+          line-height: 33px;
+          color: #D43E36; }
+        .main__content__formulario__info__nombres {
+          display: flex;
+          gap: 3rem;
+          padding-bottom: 0.5rem; }
+          .main__content__formulario__info__nombres p {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+            color: #BBBBBB; }
+            .main__content__formulario__info__nombres p .simbolo {
+              color: #D43E36; }
+          .main__content__formulario__info__nombres__imput {
+            width: 100%;
+            height: 38px;
+            border: 1px solid #B7B1A9;
+            border-radius: 5px; }
+        .main__content__formulario__info__correo {
+          display: flex;
+          gap: 3rem;
+          padding-bottom: 0.5rem; }
+          .main__content__formulario__info__correo p {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+            color: #BBBBBB; }
+            .main__content__formulario__info__correo p .simbolo {
+              color: #D43E36; }
+          .main__content__formulario__info__correo__imput {
+            width: 100%;
+            height: 38px;
+            border: 1px solid #B7B1A9;
+            border-radius: 5px; }
+        .main__content__formulario__info__favoritos {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 22px;
+          color: #BBBBBB; }
+          .main__content__formulario__info__favoritos select {
+            width: 100%;
+            height: 38px;
+            border: 1px solid #1A36A8;
+            border-radius: 5px;
+            color: #1A36A8; }
+            .main__content__formulario__info__favoritos select option {
+              color: #1A36A8; }
+        .main__content__formulario__info__checkbox {
+          padding: 2rem 0rem; }
+          .main__content__formulario__info__checkbox label {
+            padding: 0rem  0.5rem;
+            text-align: justify; }
+          .main__content__formulario__info__checkbox p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            color: #BBBBBB;
+            padding: 0.5rem 0rem; }
+            .main__content__formulario__info__checkbox p strong {
+              color: #1A36A8; }
+          .main__content__formulario__info__checkbox input {
+            border: 2px solid #252323;
+            background-color: #1A36A8; }
+        .main__content__formulario__info__text {
+          padding: 2rem 0rem;
+          text-align: center; }
+          .main__content__formulario__info__text strong {
+            color: #D43E36; }
+          .main__content__formulario__info__text p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px; }
+
+/****************************************************/
+@media (max-width: 700px) {
+  .main__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem; }
+    .main__content__formulario {
+      background-color: #ffff;
+      color: #2E2E2E;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0rem 0rem; }
+      .main__content__formulario__info ul {
+        position: absolute;
+        left: 85%;
+        top: -5%; }
+        .main__content__formulario__info ul img {
+          width: 100%;
+          height: 100%; }
+      .main__content__formulario__info__nombres {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; }
+      .main__content__formulario__info__correo {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; } }
+
+.stecnologia {
+  max-width: 1500px;
+  margin: 0 auto; }
+  .stecnologia__titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6rem; }
+    .stecnologia__titulo img {
+      width: 80px;
+      height: 66.43px; }
+    .stecnologia__titulo h2 {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 44px;
+      color: #1A36A8;
+      padding-top: 4rem; }
+  .stecnologia__php {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem 0rem 2rem;
+    gap: 12rem;
+    width: 100%;
+    height: 50%; }
+    .stecnologia__php__slider {
+      width: 50%;
+      height: 100%; }
+      .stecnologia__php__slider__tec {
+        max-width: 480px; }
+        .stecnologia__php__slider__tec h2 {
+          font-weight: 700;
+          font-size: 32px;
+          line-height: 44px;
+          color: #D43E36; }
+        .stecnologia__php__slider__tec p {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 25px; }
+    .stecnologia__php__img {
+      width: 45%;
+      height: 598px; }
+      .stecnologia__php__img img {
+        width: 100%;
+        height: 598px;
+        left: 800px;
+        top: 2156px; }
+
+ul.slick-dots {
+  text-align: revert; }
+
+/********************************************************************/
+@media (max-width: 700px) {
+  .stecnologia__titulo {
+    text-align: center; }
+    .stecnologia__titulo h2 {
+      padding: 2rem;
+      font-size: 26px; }
+  .stecnologia__php {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem 0rem 2rem;
+    gap: 4rem; }
+    .stecnologia__php__slider {
+      width: 100%; }
+    .stecnologia__php__img {
+      width: 100%; }
+      .stecnologia__php__img img {
+        width: 100%;
+        height: 100%; } }
+
+.sdescuentos {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 4rem 2rem 0rem 2rem; }
+  .sdescuentos__cyber {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .sdescuentos__cyber h1 {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 44px;
+      color: #1A36A8; }
+    .sdescuentos__cyber h2 {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 33px;
+      color: #595959; }
+      .sdescuentos__cyber h2 strong {
+        color: #D43E36; }
+  .sdescuentos__pasos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8rem 2rem 4rem 2rem;
+    gap: 14rem; }
+    .sdescuentos__pasos__1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .sdescuentos__pasos__1 h1 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+        color: #1A36A8; }
+      .sdescuentos__pasos__1 span {
+        margin: 20px 30px;
+        padding: 30px 40px;
+        border-radius: 100%;
+        background: #1A36A8;
+        border: 7px solid #BBBBBB;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2); }
+        .sdescuentos__pasos__1 span img {
+          width: 100%;
+          height: 100%; }
+      .sdescuentos__pasos__1 h2 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+        color: #1A36A8; }
+      .sdescuentos__pasos__1 p {
+        text-align: center;
+        max-width: 400px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        color: #595959;
+        padding: 2rem 0rem; }
+
+/***************************************/
+@media (max-width: 700px) {
+  .sdescuentos {
+    text-align: center; }
+    .sdescuentos__pasos {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem; }
+      .sdescuentos__pasos__1 img {
+        padding: 0rem 4rem; }
+      .sdescuentos__pasos__1 span {
+        padding: 30px 20px; } }

@@ -1,0 +1,14 @@
+@keyframes saltar{
+    0%{
+        transform :translatey(0);
+    }
+    10%{
+        transform:translatey(-10px);
+    }
+    50%{
+        transform:translatey(10px);
+    }
+    80%{
+        transform:translatey(10px);
+    }
+}

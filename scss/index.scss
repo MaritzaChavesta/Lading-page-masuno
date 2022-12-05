@@ -1,0 +1,19 @@
+/*Variables*/
+@import "./utils/variables";
+
+/*Globals*/
+@import "./utils/animations";
+@import "./utils/normalize";
+@import "./utils/globals";
+
+
+/*partials*/
+@import "./partials/footer";
+@import "./partials/button";
+@import "./partials/linea";
+
+/*Views*/
+@import "./views/home";
+@import "./views/main.scss";
+@import "./views/stecnologia";
+@import "./views/sdescuentos";

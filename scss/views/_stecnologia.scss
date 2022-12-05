@@ -1,0 +1,105 @@
+.stecnologia{
+    max-width: 1500px;
+    margin: 0 auto;
+   
+    &__titulo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 6rem;
+        img{
+            width:80px;
+            height:66.43px
+        }
+        h2{
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 44px;
+            color: $primary;
+            padding-top: 4rem;
+        }
+    }
+    &__php{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 2rem 0rem 2rem;
+        gap: 12rem;
+        width: 100%;
+        height: 50%;
+        &__slider{
+            width: 50%;
+            height: 100%;
+            &__tec{
+                max-width: 480px;
+                h2{
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 44px;
+                    color: $red;
+                }
+                p{
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 25px;
+                }
+            }
+            
+            
+        }
+        &__img{
+            width: 45%;
+            height: 598px;
+            img{
+                width: 100%;
+                height: 598px;
+                left: 800px;
+                top: 2156px
+            }
+        }
+    }
+}
+
+ul.slick-dots {
+    
+    text-align: revert;
+  
+}
+
+
+
+/********************************************************************/
+
+
+@media (max-width: 700px){
+.stecnologia__titulo{
+    text-align: center;
+    h2{
+        padding: 2rem;
+        font-size: 26px;
+    }
+}
+.stecnologia__php{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+     padding: 4rem 2rem 0rem 2rem;
+
+     gap: 4rem;
+
+     &__slider{
+        width: 100%;
+     }
+     &__img{
+        width: 100%;
+        img{
+            
+                width: 100%;
+                height: 100%;
+        }
+    }
+    }
+}
